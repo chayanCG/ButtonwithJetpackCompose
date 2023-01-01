@@ -8,14 +8,12 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.Close
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.withjetpack.buttonwithjetpackcompose.ui.theme.ButtonWithjetpackComposeTheme
 
@@ -51,12 +49,12 @@ class MainActivity : ComponentActivity() {
     }
 
     @Composable
-    private fun IconButtonFun(s: String) {
+    private fun IconButtonFun(string: String) {
 
         var context = LocalContext.current.applicationContext
         IconButton(onClick = {
 
-            Toast.makeText(context, "Click", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, string, Toast.LENGTH_LONG).show()
         }) {
             Icon(Icons.Default.ArrowBack,contentDescription="Arrowback")
         }
