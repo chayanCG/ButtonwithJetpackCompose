@@ -78,6 +78,7 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun OutlinedButtonFun(s: String) {
+
         var context = LocalContext.current.applicationContext
         OutlinedButton(onClick = {
             Toast.makeText(context, "Click", Toast.LENGTH_LONG).show()
